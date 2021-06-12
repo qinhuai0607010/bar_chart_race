@@ -10,6 +10,10 @@ from matplotlib.colors import Colormap
 from ._common_chart import CommonChart
 from ._utils import prepare_wide_data
 
+plt.rcParams['font.sans-serif'] = ['SimHei']  #Windows
+plt.rcParams['font.sans-serif'] = ['Arial Unicode MS'] #Mac
+plt.rcParams['axes.unicode_minus'] = False
+
 class _BarChartRace(CommonChart):
     
     def __init__(self, df, filename, orientation, sort, n_bars, fixed_order, fixed_max,
